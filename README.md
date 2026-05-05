@@ -1,3 +1,14 @@
+---
+title: Indic Script Recognition
+emoji: ✍️
+colorFrom: orange
+colorTo: purple
+sdk: streamlit
+sdk_version: "1.32.0"
+app_file: app.py
+pinned: false
+---
+
 # T3.7 — Multi-Script Handwritten Indic Character Recognition
 
 A two-stage CNN pipeline for recognising handwritten characters across four Indic scripts: **Devanagari**, **Tamil**, **Bengali**, and **Telugu**.
