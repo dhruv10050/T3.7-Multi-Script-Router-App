@@ -1,0 +1,148 @@
+{
+  "env": "kaggle",
+  "kaggle_smoke": false,
+  "img_size": 64,
+  "router_best_val_acc": 99.91769547325103,
+  "classifiers": {
+    "devanagari": {
+      "script": "devanagari",
+      "num_classes": 46,
+      "test_size": 13800,
+      "top1_acc": 99.41,
+      "top5_acc": 99.99,
+      "macro_f1": 99.41,
+      "weighted_f1": 99.41
+    },
+    "tamil": {
+      "script": "tamil",
+      "num_classes": 156,
+      "test_size": 13574,
+      "top1_acc": 95.99,
+      "top5_acc": 99.77,
+      "macro_f1": 95.96,
+      "weighted_f1": 95.97
+    },
+    "bengali": {
+      "script": "bengali",
+      "num_classes": 84,
+      "test_size": 24916,
+      "top1_acc": 93.14,
+      "top5_acc": 98.79,
+      "macro_f1": 93.12,
+      "weighted_f1": 93.13
+    },
+    "telugu": {
+      "script": "telugu",
+      "num_classes": 6,
+      "test_size": 180,
+      "top1_acc": 98.89,
+      "top5_acc": 100.0,
+      "macro_f1": 98.88,
+      "weighted_f1": 98.88
+    }
+  },
+  "robustness": {
+    "devanagari": {
+      "clean": 99.41,
+      "blur_light": 99.35,
+      "blur_heavy": 98.3,
+      "rotate_10": 99.17,
+      "rotate_20": 95.93,
+      "brightness": 98.94,
+      "crop_pad6": 99.41
+    },
+    "tamil": {
+      "clean": 95.99,
+      "blur_light": 38.0,
+      "blur_heavy": 3.61,
+      "rotate_10": 95.87,
+      "rotate_20": 90.68,
+      "brightness": 95.99,
+      "crop_pad6": 95.99
+    },
+    "bengali": {
+      "clean": 93.14,
+      "blur_light": 91.89,
+      "blur_heavy": 78.61,
+      "rotate_10": 92.2,
+      "rotate_20": 85.5,
+      "brightness": 92.9,
+      "crop_pad6": 93.14
+    },
+    "telugu": {
+      "clean": 98.89,
+      "blur_light": 98.89,
+      "blur_heavy": 97.78,
+      "rotate_10": 97.78,
+      "rotate_20": 96.67,
+      "brightness": 95.56,
+      "crop_pad6": 98.89
+    }
+  },
+  "latency": {
+    "router": {
+      "mean_ms": 4.19,
+      "std_ms": 0.19
+    },
+    "devanagari": {
+      "mean_ms": 5.4,
+      "std_ms": 0.33,
+      "e2e_ms": 9.59
+    },
+    "tamil": {
+      "mean_ms": 5.45,
+      "std_ms": 0.53,
+      "e2e_ms": 9.64
+    },
+    "bengali": {
+      "mean_ms": 6.02,
+      "std_ms": 0.28,
+      "e2e_ms": 10.21
+    },
+    "telugu": {
+      "mean_ms": 5.97,
+      "std_ms": 0.2,
+      "e2e_ms": 10.16
+    },
+    "end_to_end_worst": {
+      "mean_ms": 10.21,
+      "std_ms": 0
+    }
+  },
+  "ablations": {
+    "1_cnn_depth": {
+      "2_layers": 93.99,
+      "3_layers": 95.62,
+      "4_layers_default": 96.62
+    },
+    "2_input_resolution": {
+      "28x28": 94.72,
+      "32x32": 95.26,
+      "64x64": 96.39
+    },
+    "3_batchnorm": {
+      "no_batchnorm": 94.14,
+      "with_batchnorm_default": 96.31
+    },
+    "4_dropout": {
+      "p_0.0": 97.14,
+      "p_0.3": 96.92,
+      "p_0.5_default": 96.64,
+      "p_0.7": 95.16
+    },
+    "5_augmentation": {
+      "no_augmentation": 3.04,
+      "full_augmentation_default": 96.6
+    },
+    "6_lr_scheduler": {
+      "none": 97.09,
+      "StepLR": 97.14,
+      "CosineAnn": 96.44,
+      "ReduceLROnPlateau": 95.57
+    },
+    "7_architecture_depth_proxy": {
+      "shallow_2layer": 92.88,
+      "deep_4layer_default": 96.63
+    }
+  }
+}

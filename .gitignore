@@ -1,0 +1,33 @@
+# Credentials — never commit
+kaggle.json
+.kaggle/
+*.token
+*.key
+*.pem
+.env
+.envrc
+
+# kaggle_output: include figures/results, exclude heavy checkpoints/logs
+kaggle_output/checkpoints/
+kaggle_output/dl/
+kaggle_output/logs/
+
+./working
+
+# Working outputs
+working/checkpoints
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+
+# Large data files
+data/
+*.zip
+*.tar.gz
+*.csv.gz
+context/temp.txt

@@ -379,20 +379,4 @@ def build_router_loaders(
     tr_dl = make_loader(tr_ds, ROUTER_BATCH, shuffle=False, sampler=sampler)
     vl_dl = make_loader(vl_ds, ROUTER_BATCH, shuffle=False)
     return tr_dl, vl_dl, class_w
-import random
-import zipfile
-from pathlib import Path
-from typing import List, Optional, Tuple
-
-import numpy as np
-import pandas as pd
-import torch
-from PIL import Image
-from sklearn.model_selection import train_test_split
-from torch.utils.data import DataLoader, Dataset, WeightedRandomSampler
-
-from config import (CHAR_BATCH, IMG_SIZE, NUM_WORKERS, PIN_MEMORY,
-                    PERSISTENT_W, ROUTER_BATCH, ROUTER_MAX, SEED,
-                    TELUGU_BATCH, WORK_DIR)
-from transforms import get_transforms
 
