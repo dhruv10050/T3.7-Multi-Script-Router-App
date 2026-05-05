@@ -55,9 +55,17 @@ def _load_state(model: torch.nn.Module, path: Path) -> torch.nn.Module:
     return model
 
 
+# Default public model repo — override with HF_MODEL_REPO env var
+_DEFAULT_HF_REPO = "dhruv10050/t3-7-indic-recognition"
+
+
 def _try_hf_download(ckpt_dir: Path) -> None:
-    """Download checkpoints from HuggingFace Hub when HF_MODEL_REPO is set."""
-    repo = os.environ.get("HF_MODEL_REPO", "").strip()
+    """Download checkpoints from HuggingFace Hub.
+
+    Uses HF_MODEL_REPO env var if set, otherwise falls back to the public
+    default repo dhruv10050/t3-7-indic-recognition.
+    """
+    repo = os.environ.get("HF_MODEL_REPO", _DEFAULT_HF_REPO).strip()
     if not repo:
         return
     try:

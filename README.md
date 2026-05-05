@@ -205,6 +205,31 @@ Bold = default configuration used in the main pipeline.
 
 ---
 
+## Streamlit App & Pretrained Models
+
+A live interactive demo is available at the app repo. Run it locally:
+
+```bash
+git clone https://github.com/dhruv10050/T3.7-Multi-Script-Router-App
+cd T3.7-Multi-Script-Router-App
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Checkpoints are loaded automatically from HuggingFace Hub on first launch:
+
+| File | Script | Size |
+|------|--------|------|
+| `router_best.pth` | ScriptRouter | 26 MB |
+| `devanagari_best.pth` | Devanagari (46 classes) | 30 MB |
+| `tamil_best.pth` | Tamil (156 classes) | 31 MB |
+| `bengali_best.pth` | Bengali (84 classes) | 30 MB |
+| `telugu_best.pth` | Telugu (6 classes) | 102 MB |
+
+Model hub: **[huggingface.co/dhruv10050/t3-7-indic-recognition](https://huggingface.co/dhruv10050/t3-7-indic-recognition)**
+
+---
+
 ## Outputs
 
 All outputs are written to `working/` (mapped to `/kaggle/working/` on Kaggle):
