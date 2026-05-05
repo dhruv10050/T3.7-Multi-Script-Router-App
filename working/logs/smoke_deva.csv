@@ -1,0 +1,2 @@
+epoch,tr_loss,tr_acc,vl_loss,vl_acc,lr
+1,2.5180,14.29,1.8023,16.67,0.000000

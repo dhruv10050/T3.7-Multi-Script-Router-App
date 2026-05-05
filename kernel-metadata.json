@@ -1,0 +1,21 @@
+{
+  "id": "dhruv10050/t3-7-multi-script-indic-handwriting-recognition",
+  "title": "T3.7 Multi-Script Indic Handwriting Recognition",
+  "code_file": "train.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "dhruv10050/indic-handwriting-src",
+    "medahmedkrichen/devanagari-handwritten-character-datase",
+    "faizalhajamohideen/uthcdtamil-handwritten-database",
+    "asefjamilajwad2/banglalekha-isolated",
+    "syamkakarla/telugu-6-vowel-dataset"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "docker_image_pinning_type": "latest"
+}

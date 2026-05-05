@@ -1,0 +1,47 @@
+{
+  "env": "mac",
+  "kaggle_smoke": false,
+  "img_size": 64,
+  "router_best_val_acc": 100.0,
+  "classifiers": {
+    "devanagari": {
+      "script": "devanagari",
+      "num_classes": 46,
+      "test_size": 13800,
+      "top1_acc": 59.7,
+      "top5_acc": 89.14,
+      "macro_f1": 57.51,
+      "weighted_f1": 57.51
+    },
+    "tamil": {
+      "script": "tamil",
+      "num_classes": 156,
+      "test_size": 13574,
+      "top1_acc": 55.94,
+      "top5_acc": 86.84,
+      "macro_f1": 54.26,
+      "weighted_f1": 54.01
+    },
+    "bengali": {
+      "script": "bengali",
+      "num_classes": 84,
+      "test_size": 24916,
+      "top1_acc": 41.95,
+      "top5_acc": 73.86,
+      "macro_f1": 38.38,
+      "weighted_f1": 38.38
+    },
+    "telugu": {
+      "script": "telugu",
+      "num_classes": 6,
+      "test_size": 180,
+      "top1_acc": 95.0,
+      "top5_acc": 100.0,
+      "macro_f1": 94.84,
+      "weighted_f1": 94.84
+    }
+  },
+  "robustness": {},
+  "latency": {},
+  "ablations": {}
+}
